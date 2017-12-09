@@ -1,11 +1,11 @@
 # WKWebView-Printing-Puzzle
 
-How To Print Using WKWebView on macOS 10.12?
-============================================
+How To Print Using WKWebView on macOS?
+======================================
 
 Description
 -----------
-How does one print using WKWebView on macOS 10.12 *without* using the legacy WebView as a workaround?
+How does one print using WKWebView on macOS *without* using the legacy WebView as a workaround?
 
 I am currently using the Legacy WebView as a workaround. However, I would rather use WKWebView.
 
