@@ -1,10 +1,9 @@
 # WKWebView-Printing-Puzzle
 
-How To Print Using WKWebView on macOS?
-======================================
+# How To Print Using WKWebView on macOS?
 
-Description
------------
+## Description
+
 How does one print using WKWebView on macOS *without* using the legacy WebView as a workaround?
 
 I am currently using the Legacy WebView as a workaround. However, I would rather use WKWebView.
@@ -13,15 +12,13 @@ A projects `macOSLegacyWebViewPrintSnippet` and `macOSWKWebViewPrintSnippet` in 
 
 The supporting Apple documentation can be found at [Setting Up a Web View (Legacy)](https://developer.apple.com/documentation/webkit/setting_up_a_web_view_legacy) and [WKWebView Overview](https://developer.apple.com/documentation/webkit/wkwebview).
 
-Configuration
--------------
+## Configuration
 
 macOS 10.12.5, 10.12.6  
 Xcode 8.3.3, 9.2 using Base SDK: macOS 10.12, deployment target: macOS 10.12  
 Swift 4
 
-Steps to Reproduce
-------------------
+## Steps to Reproduce
 
 1. In Xcode 9, create a new Swift macOS project.
 
@@ -66,3 +63,7 @@ Steps to Reproduce
 4. Select File menu > Print... 
 
     > Observe that both the preview and resulting printout are blank. 
+
+## Related
+
+* [OpenRadar/23649229: No Method of Printing WKWebView ](http://www.openradar.me/23649229) … duplicate of 36557179
