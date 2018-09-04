@@ -22,22 +22,22 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
         //webView.uiDelegate = self
         view = webView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        let myURL = URL(string: "https://www.apple.com")
+        let myURL = URL(string: "https://www.example.com")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
+
     override var representedObject: Any? {
         didSet {
-            // Update the view, if already loaded.
+        // Update the view, if already loaded.
         }
     }
-    
+
 }
 
 

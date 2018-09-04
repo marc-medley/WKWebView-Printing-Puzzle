@@ -18,6 +18,8 @@ macOS 10.12.5, 10.12.6
 Xcode 8.3.3, 9.2 using Base SDK: macOS 10.12, deployment target: macOS 10.12  
 Swift 4
 
+In build settings, `CODE_SIGN_IDENTITY` needs to be changed from `-` to either `""` (Don't Code Sign) or to a specific code sign identity.
+
 ## Steps to Reproduce
 
 1. In Xcode 9, create a new Swift macOS project.
