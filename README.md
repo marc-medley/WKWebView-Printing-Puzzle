@@ -14,15 +14,15 @@ The supporting Apple documentation can be found at [Setting Up a Web View (Legac
 
 ## Configuration
 
-macOS 10.12.5, 10.12.6  
-Xcode 8.3.3, 9.2 using Base SDK: macOS 10.12, deployment target: macOS 10.12  
-Swift 4
+macOS 10.13.6  
+Xcode 10.1 deployment target: macOS 10.13  
+Swift 4.2
 
 In build settings, `CODE_SIGN_IDENTITY` needs to be changed from `-` to either `""` (Don't Code Sign) or to a specific code sign identity.
 
 ## Steps to Reproduce
 
-1. In Xcode 9, create a new Swift macOS project.
+1. In Xcode 10.1, create a new Swift macOS project.
 
 2. Place the following code in "ViewController.swift". Note that this code is based on the iOS example provided in https://developer.apple.com/documentation/webkit/wkwebview
 
@@ -64,8 +64,12 @@ In build settings, `CODE_SIGN_IDENTITY` needs to be changed from `-` to either `
 
 4. Select File menu > Print... 
 
-    > Observe that both the preview and resulting printout are blank. 
+    > Observe that both the preview and resulting printout are blank.
+    
+## Observation
+
+An attempt to resolve issue with Project Settings > Target > Capabilities > App Sandbox: ON, [√] Printing did not work.
 
 ## Related
 
-* [OpenRadar/23649229: No Method of Printing WKWebView ](http://www.openradar.me/23649229) … duplicate of 36557179
+* [OpenRadar/23649229: No Method of Printing WKWebView ](http://www.openradar.me/23649229) … duplicate of 36557179. Also reported as 33343418.
