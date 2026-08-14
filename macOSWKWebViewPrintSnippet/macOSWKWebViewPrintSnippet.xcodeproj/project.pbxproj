@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		490440C6213EF7F6003EEA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490440C5213EF7F6003EEA5C /* Assets.xcassets */; };
 		490440C9213EF7F6003EEA5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490440C7213EF7F6003EEA5C /* Main.storyboard */; };
 		490440D5213EF7F6003EEA5C /* macOSWKWebViewPrintSnippetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490440D4213EF7F6003EEA5C /* macOSWKWebViewPrintSnippetTests.swift */; };
+		49A9E2EA266E7667003F626D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E2E9266E7667003F626D /* DateExtension.swift */; };
+		49A9E2EC266E7728003F626D /* WebviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E2EB266E7728003F626D /* WebviewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		490440D0213EF7F6003EEA5C /* macOSWKWebViewPrintSnippetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSWKWebViewPrintSnippetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490440D4213EF7F6003EEA5C /* macOSWKWebViewPrintSnippetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSWKWebViewPrintSnippetTests.swift; sourceTree = "<group>"; };
 		490440D6213EF7F6003EEA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A9E2E9266E7667003F626D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		49A9E2EB266E7728003F626D /* WebviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			children = (
 				490440C1213EF7F5003EEA5C /* AppDelegate.swift */,
 				490440C3213EF7F5003EEA5C /* ViewController.swift */,
+				49A9E2E8266E7653003F626D /* Extensions */,
 				490440C5213EF7F6003EEA5C /* Assets.xcassets */,
 				490440C7213EF7F6003EEA5C /* Main.storyboard */,
 				490440CA213EF7F6003EEA5C /* Info.plist */,
@@ -93,6 +98,15 @@
 				490440D6213EF7F6003EEA5C /* Info.plist */,
 			);
 			path = macOSWKWebViewPrintSnippetTests;
+			sourceTree = "<group>";
+		};
+		49A9E2E8266E7653003F626D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49A9E2E9266E7667003F626D /* DateExtension.swift */,
+				49A9E2EB266E7728003F626D /* WebviewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +153,9 @@
 		490440B6213EF7F5003EEA5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					490440BD213EF7F5003EEA5C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -159,7 +174,7 @@
 				};
 			};
 			buildConfigurationList = 490440B9213EF7F5003EEA5C /* Build configuration list for PBXProject "macOSWKWebViewPrintSnippet" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -202,7 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				490440C4213EF7F5003EEA5C /* ViewController.swift in Sources */,
+				49A9E2EA266E7667003F626D /* DateExtension.swift in Sources */,
 				490440C2213EF7F5003EEA5C /* AppDelegate.swift in Sources */,
+				49A9E2EC266E7728003F626D /* WebviewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +279,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -271,10 +289,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = FCYU6566RZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -289,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -325,6 +345,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -334,10 +355,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FCYU6566RZ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -346,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -363,12 +386,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FCYU6566RZ;
 				INFOPLIST_FILE = macOSWKWebViewPrintSnippet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.macOSWKWebViewPrintSnippet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -383,12 +408,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FCYU6566RZ;
 				INFOPLIST_FILE = macOSWKWebViewPrintSnippet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.macOSWKWebViewPrintSnippet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -402,6 +429,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = macOSWKWebViewPrintSnippetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -422,6 +450,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = macOSWKWebViewPrintSnippetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
